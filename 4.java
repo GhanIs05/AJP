@@ -7,10 +7,8 @@ public class MetaData
 {
  	       try 
 		{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection
-
-            ("jdbc:mysql://localhost:3306/vvit","root","");
+           Class.forName("oracle.jdbc.driver.OracleDriver");
+       con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","R22BQ1A05E1","R22BQ1A05E1");
             Statement stmt = con.createStatement();
      ResultSet rs = stmt.executeQuery("select * from student");
          ResultSetMetaData rsmd = rs.getMetaData();
