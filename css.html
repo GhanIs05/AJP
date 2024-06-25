@@ -1,0 +1,123 @@
+a)	Text shadows, rounded corners and box shadows.
+<html>
+<head><title>CSS</title>
+<style>
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+div {
+  box-shadow: 10px 10px 5px lightblue;
+}
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+</style>
+</head>
+<body>
+<h1>Welcome to VVIT</h1>
+<div>An Autonomous Institution in Guntur,Ap,India</div><br>
+<p id="rcorners1">Rounded corners!</p>
+</body>
+</html>
+ 
+b)	Linear and Radial gradients
+
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow);
+}
+#grad2 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+</style>
+</head>
+<body>
+
+<p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
+
+<div id="grad1"></div>
+<h1>Radial Gradient - Differently Spaced Color Stops</h1>
+<div id="grad2"></div>
+
+</body>
+</html>
+ 
+c). Animation
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+</style>
+</head>
+<body>
+
+<h1>The animation Property</h1>
+
+<p>Move an element from 0px to 200px left. The animation lasts for 5 seconds. It then starts over again, and go on forever (infinite).</p>
+<div></div>
+
+</body>
+</html>
+ 
+d). Transpositions and transforms
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+}
+div.a {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg);
+}
+</style>
+</head>
+<body>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+
+<div></div>
+<h1>The transform Property</h1>
+
+<h2>transform: rotate(20deg):</h2>
+<div class="a">Hello World!</div>
+<br>
+
+</body>
+</html>
