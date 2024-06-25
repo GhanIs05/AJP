@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.*;
 public class Phonebook
@@ -14,7 +15,7 @@ String a,str;
 while(sc.hasNext())
 {
 a=sc.nextLine();
-strarray=a.split("\t");
+strarray=a.split(" ");
 ht.put(strarray[0],strarray[1]);
 System.out.println("hash table values are "+strarray[0]+":"+strarray[1]);
 }
