@@ -20,10 +20,8 @@ ServletException,IOException
 res.setContentType("text/html"); 
 PrintWriter out=res.getWriter(); 
 try{ 
-Class.forName("com.mysql.jdbc.Driver"); 
-Connection 
-con=DriverManager.getConnection("jdbc:mysql://localhost:3306/vvit","root
- ",""); 
+Class.forName("oracle.jdbc.driver.OracleDriver");
+Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","R22BQ1A05E1","R22BQ1A05E1"); 
 Statement s=con.createStatement(); 
 ResultSet r=s.executeQuery("select * from cart"); 
 out.println("<center> <table border=1>"); 
