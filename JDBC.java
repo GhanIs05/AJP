@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.util.Scanner;
 
-public class LabExpt3 {
+public class JDBC {
 
   public static void main(String[] args) {
     // TODO Auto-generated method stub
