@@ -18,6 +18,6 @@ cd tomcat-base
 Don’t close this terminal where you run this command because closing it causes tomcat to 
 shut down
 4. Deploy your servlet or jsp file into the directory i.e webapp and run your files using 
-browser.
+browser.localhost:8080/foldername/url-pattern
 5. At the end of your work shutdown tomcat by running 
  ./shutdown.sh
