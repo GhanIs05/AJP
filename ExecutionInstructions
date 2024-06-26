@@ -1,0 +1,23 @@
+1. Running oracle:
+To run oracle …if student roll no is 22BQ1A0501 then use following command in terminal to 
+connect to your account and to run oracle
+sqlcl R22BQ1A0501/ R22BQ1A0501@192.168.12.2:1521/orcl
+2. Running apache tomcat
+To run apache tomcat
+ For first time usage: copy tomcat base folder in to your working directory by opening terminal
+ Using following command at the terminal
+ 
+ cp -r /opt/tomcat/tomcat-base/ ~ required for onetime only
+to run tomcat
+1. Open terminal
+2. Change to tomacat-base directory using the command
+ 
+cd tomcat-base
+3. Run the tomcat by running startup.sh script file at same terminal using the command
+./startup.sh
+Don’t close this terminal where you run this command because closing it causes tomcat to 
+shut down
+4. Deploy your servlet or jsp file into the directory i.e webapp and run your files using 
+browser.
+5. At the end of your work shutdown tomcat by running 
+ ./shutdown.sh
