@@ -13,8 +13,8 @@ public class LabExpt3 {
     PreparedStatement ps;
     ResultSet rs;
     try {
-      Class.forName("oracle.jdbc.driver.OracleDriver");
-      conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","R22BQ1A05E1","R22BQ1A05E1");
+     DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+    conn = DriverManager.getConnection(jdbc:oracle:thin:@192.168.12.2:1521/orcl,"R22BQ1A05E1","R22BQ1A05E1");
       Scanner sc = new Scanner(System.in);
       System.out.println("The choices are: " + "\t1.Add \t2.Delete\t3.Modify\t4.Retrieve");
       int choice = sc.nextInt();
