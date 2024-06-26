@@ -1,0 +1,32 @@
+Ext.css
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color:pink;
+}
+
+Ext.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+<style>
+body {background-color: powderblue;}
+h2   {color: magenta;}
+h3    {color: red;}
+</style>
+</head>
+<body>
+<h1>This is a External CSS</h1>
+<p>This is External CSS</p>
+<h2>This is Internal CSS</h2>
+<h3>This is Internal CSS</h3>
+<h4 style="color:black;font-family: verdana;font-size: 300%;">
+This is Internal CSS</h4>
+</body>
+</html>
