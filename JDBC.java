@@ -20,38 +20,38 @@ public class JDBC {
       int choice = sc.nextInt();
       switch (choice) {
         case 1:
-          ps = conn.prepareStatement("insert into Studen1 values(?,?);");
-          System.out.println("Enter student number and name:");
-          int no = sc.nextInt();
+          ps = conn.prepareStatement("insert into studies values(?,?);");
+          System.out.println("Enter name and splace:");
+          String no = sc.next();
           String str = sc.next();
-          ps.setInt(1, no);
+          ps.setString(1, no);
           ps.setString(2, str);
           ps.executeUpdate();
           System.out.println("Inserted succesfully");
           break;
         case 2:
-          ps = conn.prepareStatement("delete from Studen1 where rool_no=?");
+          ps = conn.prepareStatement("delete from studies where splace=?");
           System.out.println("Enter roll number:");
-          int roll = sc.nextInt();
-          ps.setInt(1, roll);
+          String roll = sc.next();
+          ps.setString(1, roll);
           ps.executeUpdate();
           System.out.println("Deleted succesfully");
           break;
         case 3:
-          ps = conn.prepareStatement("update Studen1 set name=? where rool_no=?");
-          System.out.println("Enter existing roll number and new name:");
-          no = sc.nextInt();
+          ps = conn.prepareStatement("update studies set pname=? where splace=?");
+          System.out.println("Enter existing name and splace:");
+          no = sc.next();
           str = sc.next();
           ps.setString(1, str);
-          ps.setInt(2, no);
+          ps.setString(2, no);
           ps.executeUpdate();
           System.out.println("Updated succesfully");
           break;
         case 4:
-          ps = conn.prepareStatement("select * from Studen1;");
+          ps = conn.prepareStatement("select * from studies;");
           rs = ps.executeQuery();
           while (rs.next()) {
-            System.out.println(rs.getInt(1) + "\t" + rs.getString(2));
+            System.out.println(rs.getString(1) + "\t" + rs.getString(2));
           }
           break;
         default:
